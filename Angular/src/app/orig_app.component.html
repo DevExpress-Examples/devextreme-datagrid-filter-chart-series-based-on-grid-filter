@@ -1,0 +1,27 @@
+<dx-data-grid [dataSource]="orders" [showBorders]="true" (onOptionChanged)="onOptionChanged($event)">
+  <dxo-filter-row [visible]="true">
+  </dxo-filter-row>
+  
+  <dxo-paging [pageSize]="5">
+  </dxo-paging>
+  
+  <dxi-column dataField="OrderNumber" caption="Invoice Number">
+  </dxi-column>
+  <dxi-column dataField="OrderDate" dataType="date">
+  </dxi-column>
+  <dxi-column dataField="SaleAmount" format="currency">
+  </dxi-column>
+  <dxi-column dataField="Employee">
+  </dxi-column>
+  <dxi-column dataField="CustomerStoreCity" caption="City">
+  </dxi-column>
+</dx-data-grid>
+
+<dx-chart [dataSource]="orders" resolveLabelOverlapping="stack">
+  <dxo-legend [visible]="false"></dxo-legend>
+  <dxo-argument-axis argumentType="datetime">
+  </dxo-argument-axis>
+  <dxi-series type="bar" argumentField="OrderDate" valueField="SaleAmount">
+    <dxo-label [visible]="true"></dxo-label>
+  </dxi-series>
+</dx-chart>

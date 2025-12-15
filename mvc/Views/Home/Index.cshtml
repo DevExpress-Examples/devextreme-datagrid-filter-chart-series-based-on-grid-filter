@@ -1,0 +1,48 @@
+@using DataGridChartFilterMVC.Models
+
+<script type="text/javascript">
+    //<![CDATA[
+    function onOptionChanged(e) {
+        if (e.fullName.indexOf("filterValue") > -1) {
+            setTimeout(function () {
+                var chartData = $("#chart").dxChart("instance").getDataSource();
+                var filterExpr = e.component.getCombinedFilter(true);
+                if (filterExpr)
+                    chartData.filter(filterExpr);
+                else
+                    chartData.filter([]);
+                chartData.reload();
+            });
+        }
+    }
+    //]]>
+</script>
+
+@(Html.DevExtreme().DataGrid<OrderWithDelivery>()
+    .DataSource(d => d.WebApi().Controller("DataGridFiltering").Key("ID"))
+    .OnOptionChanged("onOptionChanged")
+    .ShowBorders(true)
+    .FilterRow(filterRow => filterRow.Visible(true))
+    .Paging(paging => paging.PageSize(5))
+    .Columns(columns => {
+        columns.AddFor(m => m.OrderNumber);
+        columns.AddFor(m => m.OrderDate);
+        columns.AddFor(m => m.SaleAmount).Format(Format.Currency);
+        columns.AddFor(m => m.Employee);
+        columns.AddFor(m => m.CustomerStoreCity);
+    })
+)
+
+@(Html.DevExtreme().Chart()
+    .ID("chart")
+    .DataSource(d => d.WebApi().Controller("DataGridFiltering").Key("ID"))
+    .ResolveLabelOverlapping(ChartResolveLabelOverlapping.Stack)
+    .ArgumentAxis(argumentAxis => argumentAxis.ArgumentType(ChartDataType.DateTime))
+    .Series(series =>
+        series.Add()
+            .Type(SeriesType.Bar)
+            .ArgumentField("OrderDate")
+            .ValueField("SaleAmount")
+            .Label(label => label.Visible(true))
+    )
+)
