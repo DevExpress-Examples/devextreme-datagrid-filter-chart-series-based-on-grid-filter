@@ -1,4 +1,14 @@
-.main {
-  margin: 50px;
-  width: 90vw;
+#app-container {
+  position: relative;
+  width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#gridContainer {
+  margin-bottom: 30px;
+}
+
+#chartContainer {
+  position: relative;
 }

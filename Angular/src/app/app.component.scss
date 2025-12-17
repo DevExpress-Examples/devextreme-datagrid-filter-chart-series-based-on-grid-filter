@@ -1,4 +1,16 @@
-.default-style {
-  margin: 50px;
-  width: 90vw;
+#app-container {
+  position: relative;
+  width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+dx-data-grid {
+  display: block;
+  margin-bottom: 30px;
+}
+
+dx-chart {
+  display: block;
+  position: relative;
 }
