@@ -30,7 +30,7 @@ This example illustrates how to filter Сhart's series based on the grid's filte
 
 - [Chart - API Reference](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxChart/)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=devextreme-datagrid-filter-chart-series-based-on-grid-filter&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=devextreme-datagrid-filter-chart-series-based-on-grid-filter&~~~was_helpful=no)
 
