@@ -5,10 +5,10 @@
   margin: 0 auto;
 }
 
-#gridContainer {
+#grid-container {
   margin-bottom: 30px;
 }
 
-#chartContainer {
+#chart-container {
   position: relative;
 }
