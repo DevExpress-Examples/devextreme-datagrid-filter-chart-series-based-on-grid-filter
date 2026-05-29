@@ -1,6 +1,0 @@
-{
-  "extends": "eslint-config-devextreme/stylelintrc",
-  "rules": {
-    "selector-id-pattern": null
-  }
-}

@@ -298,7 +298,7 @@ $(() => {
     'Employee': 'Clark Morgan',
   }];
 
-  const chart = $('#chartContainer').dxChart({
+  const chart = $('#chart-container').dxChart({
     dataSource: orders,
     resolveLabelOverlapping: 'stack',
     argumentAxis: {
@@ -314,7 +314,7 @@ $(() => {
     }],
   }).dxChart('instance');
 
-  $('#gridContainer').dxDataGrid({
+  $('#grid-container').dxDataGrid({
     dataSource: orders,
     showBorders: true,
     filterRow: {
