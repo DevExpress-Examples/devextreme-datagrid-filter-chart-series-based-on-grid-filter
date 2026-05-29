@@ -1,11 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-import { DxChartComponent } from 'devextreme-angular/ui/chart';
-import { DxDataGridTypes } from 'devextreme-angular/ui/data-grid';
+import { DxChartModule, DxChartComponent } from 'devextreme-angular/ui/chart';
+import { DxDataGridModule, DxDataGridTypes } from 'devextreme-angular/ui/data-grid';
 import query from 'devextreme/data/query';
 import { Order } from './app.types';
 
 @Component({
   selector: 'app-root',
+  imports: [DxDataGridModule, DxChartModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
